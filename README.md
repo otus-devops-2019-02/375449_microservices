@@ -1,10 +1,20 @@
-ДЗ к занятию №14 (docker-1)
+ДЗ к занятию №15 (docker-2)
+
+### Сделано:
+
+	1. Создал docker host
+	2. Создал своего образа
+	3. Поработал с Docker Hub
+
+<details>
+<summary>ДЗ к занятию №14 (docker-1)</summary>
 
 ### Сделано:
 
 	1. Установил Docker
 	2. Запустил контейнер hello-world 
 	3. Работа с образами Docker 
+</details>
 
 <details>
 <summary>ДЗ к занятию №13 (ansible-4)</summary>
