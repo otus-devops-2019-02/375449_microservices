@@ -3,6 +3,7 @@ FROM python:3.6.0-alpine
 WORKDIR /app
 ADD . /app
 
+RUN apk add --no-cache build-base gcc
 RUN pip install --upgrade pip && \
     pip install -r /app/requirements.txt
 
