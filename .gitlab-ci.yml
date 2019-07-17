@@ -20,8 +20,10 @@ build_job:
 
 test_unit_job:
   stage: test
+  services:
+    - mongo:latest
   script:
-    - echo 'Testing 1'
+    - ruby simpletest.rb
 
 test_integration_job:
   stage: test
@@ -32,27 +34,40 @@ deploy_dev_job:
   stage: review
   script:
     - echo 'Deploy'
-environment:
-name: dev
-url: http://dev.example.com
+  environment:
+    name: dev
+    url: http://dev.example.com
+
+
+branch review:
+  stage: review
+  script: echo "Deploy to $CI_ENVIRONMENT_SLUG"
+  environment:
+    name: branch/$CI_COMMIT_REF_NAME
+    url: http://$CI_ENVIRONMENT_SLUG.example.com
+  only:
+    - branches
+  except:
+    - master
 
 staging:
-stage: stage
-when: manual
+  stage: stage
+  when: manual
   only:
     - /^\d+\.\d+\.\d+/
-script:
-- echo 'Deploy'
-environment:
-name: stage
-url: https://beta.example.com
+  script:
+    - echo 'Deploy'
+  environment:
+    name: stage
+    url: https://beta.example.com
+
 production:
-stage: production
-when: manual
+  stage: production
+  when: manual
   only:
     - /^\d+\.\d+\.\d+/
-script:
-- echo 'Deploy'
-environment:
-name: production
-url: https://example.com
+  script:
+    - echo 'Deploy'
+  environment:
+    name: production
+    url: https://example.com
