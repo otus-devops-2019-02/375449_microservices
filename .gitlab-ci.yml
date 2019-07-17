@@ -39,6 +39,8 @@ url: http://dev.example.com
 staging:
 stage: stage
 when: manual
+  only:
+    - /^\d+\.\d+\.\d+/
 script:
 - echo 'Deploy'
 environment:
@@ -47,6 +49,8 @@ url: https://beta.example.com
 production:
 stage: production
 when: manual
+  only:
+    - /^\d+\.\d+\.\d+/
 script:
 - echo 'Deploy'
 environment:
