@@ -32,4 +32,4 @@ scrape_configs:
   - job_name: 'post'
     static_configs:
       - targets:
-        - 'post:5000'
+        - 'post:5000'       
