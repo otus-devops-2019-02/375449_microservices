@@ -1,4 +1,22 @@
-ДЗ к занятию №20 monitoring-1)
+ДЗ к занятию №21 (monitoring-2)
+
+### Сделано:
+
+Мониторинг Docker контейнеров 
+Визуализация метрик 
+Сбор метрик работы приложения и бизнес метрик 
+Настройка и проверка алертинга
+
+Ссылки на образы
+
+375449/ui:latest
+375449/post:latest
+375449/comment:latest
+375449/prometheus:latest
+375449/alertmanager:latest
+
+<details>
+<summary>ДЗ к занятию №20 (monitoring-1)</summary>
 
 ### Сделано:
 
@@ -12,7 +30,7 @@
 375449/post:latest
 375449/comment:latest
 375449/prometheus:latest
-
+</details>
 
 <details>
 <summary>ДЗ к занятию №19 (gitlab-ci-1)</summary>
