@@ -18,7 +18,8 @@ end
 
 def healthcheck_handler(db_url, version)
   begin
-    commentdb_test = Mongo::Client.new(db_url,server_selection_timeout: 2)
+    commentdb_test = Mongo::Client.new(db_url,
+                                       server_selection_timeout: 2)
     commentdb_test.database_names
     commentdb_test.close
   rescue StandardError
