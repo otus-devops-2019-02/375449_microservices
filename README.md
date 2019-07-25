@@ -1,4 +1,15 @@
-ДЗ к занятию №21 (monitoring-2)
+ДЗ к занятию №23 (logging-1)
+
+### Сделано:
+
+	1. Сбор неструктурированных логов
+	2. Визуализация логов
+	3. Сбор структурированных логов
+	4. Распределенная трассировка
+
+
+<details>
+<summary>ДЗ к занятию №21 (monitoring-2)</summary>
 
 ### Сделано:
 
@@ -14,6 +25,8 @@
 375449/comment:latest
 375449/prometheus:latest
 375449/alertmanager:latest
+</details>
+
 
 <details>
 <summary>ДЗ к занятию №20 (monitoring-1)</summary>
